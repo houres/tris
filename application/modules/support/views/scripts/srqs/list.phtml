@@ -1,0 +1,51 @@
+<?php
+$this->title = $this->translate("Requests");
+$this->headTitle($this->title);
+$this->jQuery()->enable();
+?>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#srqList').dataTable( {
+            "bJQueryUI": true
+        } );
+    } );
+</script>
+
+<?php $id = 0; ?>
+
+<table id="srqList">
+    <thead>
+        <tr>
+            <th style="width:3%">Id</th>
+            <th style="width:20%"><?php echo $this->translate('Subject'); ?></th>
+            <th style="width:50%"><?php echo $this->translate('Body'); ?></th>
+            <th style="width:15%"><?php echo $this->translate('Department'); ?></th>
+            <th style="width:15%"><?php echo $this->translate('Status'); ?></th>
+            <th style="width:7%">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($this->paginator as $request) : ?>
+            <tr <?php if ($id%2==0) echo ' class="grey" '; $id++;  ?>>
+                <td style="padding:7px;"><?php echo $this->escape($request['id']); ?></td>
+                <td><?php echo $this->escape($request['ticketSubject']); ?></td>
+
+                <td><?php echo substr($this->escape($request['ticketBody']), '0', '120'); ?></td>
+                <td><?php echo $this->escape($request['departmentName']); ?></td>
+                <td><?php echo $this->escape($request['name']); ?></td>
+
+
+                <td>
+                    <a href="<?php echo $this->url(array('controller' => 'srq', 'action' => 'show', 'id' => $request['id'])); ?>"><?php echo $this->translate('Show'); ?></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+            </tbody>
+    </table>
+
+<?php
+           // echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');
+?>

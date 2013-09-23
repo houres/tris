@@ -1,0 +1,28 @@
+<?php
+/**
+ * Tickety
+ */
+$this->title = "Moje zgłoszenia";
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller'=>'index',
+'action'=>'add'));?>">Dodaj nowy ticket</a></p>
+<table>
+<tr>
+<th>Tytuł</th>
+<th>Treść</th>
+<th>Utworzony</th>
+<th>&nbsp;</th>
+</tr>
+<?php foreach($this->tickets as $ticket) : ?>
+<tr>
+<td><?php echo $this->escape($ticket->subject);?></td>
+<td><?php echo $this->escape($ticket->body);?></td>
+<td><?php echo $this->escape($ticket->created);?></td>
+<td>
+<a href="<?php echo $this->url(array('controller'=>'index',
+'action'=>'edit', 'id'=>$ticket->id));?>">Edit</a>
+</td>
+</tr>
+<?php endforeach; ?>
+</table>

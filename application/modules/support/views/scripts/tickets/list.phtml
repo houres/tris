@@ -1,0 +1,72 @@
+<?php
+$this->title = $this->translate('Tickets');
+$this->headTitle($this->title);
+$this->jQuery()->enable();
+?>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#ticketList').dataTable( {
+            "aoColumns": [
+			{ "bSearchable": true },
+			{ "bSearchable": false,  "bSortable": false },
+			{ "bSearchable": false,  "bSortable": false },
+			{ "bSearchable": false },
+			{ "bSearchable": false },
+                        { "bSearchable": false },
+                        { "bSearchable": false,  "bSortable": false }
+		],
+            "bJQueryUI": true,
+            "bAutoWidth": true,
+            "oLanguage": {
+                "sLengthMenu": "<?php echo $this->translate('Display _MENU_ records per page'); ?>",
+                "sZeroRecords": "<?php echo $this->translate('Nothing found - sorry'); ?>",
+                "sInfo": "<?php echo $this->translate('Showing _START_ to _END_ of _TOTAL_ records'); ?>",
+                "sInfoEmpty": "<?php echo $this->translate('Showing 0 to 0 of 0 records'); ?>",
+                "sInfoFiltered": "(<?php echo $this->translate('filtered from _MAX_ total records'); ?>)",
+                "sSearch" : "<?php echo $this->translate('Search'); ?>"
+                }
+        } );
+} );
+</script> 
+
+<?php $id = 0; ?>
+
+<table id="ticketList">
+
+    <thead>
+        <tr>
+            <th style="width:5%;">Id</th>
+            <th style="width:20%;"><?php echo $this->translate('Title'); ?></th>
+            <th style="width:50%"><?php echo $this->translate('Body'); ?></th>
+            <th style="width:9%"><?php echo $this->translate('Priority'); ?></th>
+            <th style="width:9"><?php echo $this->translate('Created'); ?></th>
+            <th style="width:9%"><?php echo $this->translate('Status'); ?></th>
+            <th style="width: 7%"><?php echo $this->translate('Details'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($this->paginator as $ticket) : ?>
+            <tr <?php if ($id % 2 == 0)
+                echo ' class="grey" '; $id++; ?>>
+            <td style="padding:7px;text-align: center"><?php echo $this->escape($ticket['ticketId']); ?></td>
+            <td><?php echo $this->escape($ticket['subject']); ?></td>
+
+            <td><?php echo substr($this->escape($ticket['body']), '0', '120'); ?></td>
+            <td style="text-align: center"><?php echo $this->escape($ticket['priorityName']); ?></td>
+
+            <td style="text-align: center"><?php echo date('d M Y', strtotime($this->escape($ticket['created']))); ?></td>
+            <td style="text-align: center"><?php echo $this->escape($ticket['name']); ?></td>
+            <td style="text-align: center;">
+                <a href="<?php echo $this->url(array('controller' => 'ticket', 'action' => 'show', 'id' => $ticket['ticketId'])); ?>"><?php echo $this->translate('show'); ?></a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
+<?php
+            //echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');
+?>

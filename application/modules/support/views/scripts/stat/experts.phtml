@@ -1,0 +1,99 @@
+<script>
+    $(function() {
+        var dates = $( "#from, #to" ).datepicker({
+            defaultDate: "-1w",
+            changeMonth: true,
+            numberOfMonths: 2,
+            onSelect: function( selectedDate ) {
+                var option = this.id == "from" ? "minDate" : "maxDate",
+                instance = $( this ).data( "datepicker" ),
+                date = $.datepicker.parseDate(
+                instance.settings.dateFormat ||
+                    $.datepicker._defaults.dateFormat,
+                selectedDate, instance.settings );
+                dates.not( this ).datepicker( "option", option, date );
+            }
+        });
+    });
+</script>
+
+
+<div class="greyBox">
+    <div class="greyBoxTitle"><?php echo $this->translate('Create report for Experts'); ?></div>
+    <?php
+    echo $this->form;
+    echo '</div>';
+    ?>
+
+        <div class="greyBox2">
+    <div class="greyBoxTitle"><?php echo $this->translate('Show saved report from history'); ?></div>
+        <ul>
+        <?php foreach ($this->reportList as $report) { ?>
+
+            <li> ID: <?php echo $report->reportId; ?> :: <?php echo $this->translate('Created'); ?> <?php echo $report->createDate; ?> <?php echo $this->translate('by'); ?> <?php echo $report->login; ?> &raquo; <a href="<?php echo $this->url( array('module'=>'support','controller'=>'stat','action'=>'experts','report'=>$report->reportId) ); ?>"> <?php echo $this->translate('show'); ?> </a> </li>
+
+        <?php } ?>
+        </ul>
+    </div>
+
+
+
+
+
+
+<?php
+    $this->jQuery()->enable()->uiEnable();
+    if ($this->report) {
+    ?>
+
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                $('#expertReport').dataTable( {
+                    "bJQueryUI": true,
+                    "bAutoWidth": true
+                } );
+            } );
+        </script>
+
+    <?php $id = 0; ?>
+
+        <br style="clear:both"/>
+
+        <h3>Your report:</h3>
+
+
+        <?php
+
+        echo $this->formRaport;
+
+        ?>
+
+
+        <table id="expertReport">
+            <thead
+                <tr>
+                    <th style="width:7%">ID</th>
+                    <th style="width:63%"><?php echo $this->translate('Username'); ?></th>
+                    <th style="width:10%"><?php echo $this->translate('ClosedSRQ'); ?></th>
+                    <th style="width:10%"><?php echo $this->translate('UnsolvedSRQ'); ?></th>
+                    <th style="width:10%"><?php echo $this->translate('Comment'); ?></th>
+                    <th style="width:10%"><?php echo $this->translate('Move'); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($this->results as $users) : ?>
+                <tr <?php if ($id % 2 == 0)
+                    echo ' class="grey" '; $id++; ?>>
+                <td style="padding:7px;text-align: center"><?php echo $this->escape($users->ol); ?></td>
+                <td><?php echo $this->escape($users->login); ?></td>
+                <td><?php echo $this->escape($users->solved); ?></td>
+                <td><?php echo $this->escape($users->unsolved); ?></td>
+                <td><?php echo $this->escape($users->comment); ?></td>
+                <td><?php echo $this->escape($users->move); ?></td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    <?php
+            }

@@ -1,0 +1,671 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tris\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-05 01:19+0100\n"
+"PO-Revision-Date: 2011-06-05 01:19+0100\n"
+"Last-Translator: Kamil\n"
+"Language-Team: TRIS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;translate;setLabel;setValue;setLegend;_refresh;label;Label\n"
+"X-Poedit-Basepath: C:\\Users\\goku\\Desktop\\nowe repo\\tris\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: application\n"
+
+#: application/modules/admin/controllers/UserController.php:62
+msgid "Zapisz"
+msgstr "Zapisz"
+
+#: application/modules/admin/controllers/UserController.php:176
+msgid "Add premission"
+msgstr "Dodaj pozwolenie"
+
+#: application/modules/admin/forms/ChangePassword.php:15
+#: application/modules/admin/forms/CreateUser.php:31
+msgid "Password"
+msgstr "Hasło"
+
+#: application/modules/admin/forms/ChangePassword.php:23
+msgid "Change"
+msgstr "Zmień"
+
+#: application/modules/admin/forms/CreateUser.php:23
+#: application/modules/admin/forms/EditUser.php:16
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: application/modules/admin/forms/CreateUser.php:42
+#: application/modules/admin/forms/EditUser.php:26
+msgid "Group"
+msgstr "Grupa"
+
+#: application/modules/admin/forms/CreateUser.php:49
+#: application/modules/admin/forms/EditUser.php:33
+#: application/modules/admin/forms/EditUser.php:34
+msgid "Enabled"
+msgstr "Włączony"
+
+#: application/modules/admin/forms/CreateUser.php:55
+msgid "Add user"
+msgstr "Dodaj uzytkownika"
+
+#: application/modules/admin/forms/EditUser.php:34
+msgid "Disabled"
+msgstr "Wyłączony"
+
+#: application/modules/admin/forms/EmailPreferences.php:11
+msgid "Enable module mail"
+msgstr "Włączyć moduł email"
+
+#: application/modules/admin/forms/EmailPreferences.php:14
+msgid "Enable send mail to client"
+msgstr "Włączyć mail dla klientów"
+
+#: application/modules/admin/forms/EmailPreferences.php:18
+msgid "Enable send mail to support"
+msgstr "Włączyć mail dla pracowników"
+
+#: application/modules/admin/forms/EmailPreferences.php:21
+msgid "From Mail Adress"
+msgstr "Adres maila"
+
+#: application/modules/admin/forms/EmailPreferences.php:24
+msgid "New ticket subject"
+msgstr "Temat wiadomości (nowe)"
+
+#: application/modules/admin/forms/EmailPreferences.php:27
+msgid "New ticket body"
+msgstr "Treść wiadomości (nowe)"
+
+#: application/modules/admin/forms/EmailPreferences.php:31
+msgid "Closed ticket subject"
+msgstr "Temat wiadomości (zamknięte)"
+
+#: application/modules/admin/forms/EmailPreferences.php:34
+msgid "Closed ticket body"
+msgstr "Treść wiadomości (zamknięte)"
+
+#: application/modules/admin/forms/EmailPreferences.php:39
+msgid "Save premissions"
+msgstr "Zapisz ustawienia"
+
+#: application/modules/admin/forms/SelectPremissions.php:15
+msgid "Department"
+msgstr "Departament"
+
+#: application/modules/client/controllers/TicketController.php:19
+msgid "Add ticket"
+msgstr "Dodaj zgłoszenie"
+
+#: application/modules/client/controllers/TicketController.php:100
+msgid "ticketId"
+msgstr "ticketId"
+
+#: application/modules/client/controllers/TicketController.php:101
+#: application/modules/client/forms/Answer.php:20
+msgid "Answer"
+msgstr "Odpowiedz"
+
+#: application/modules/client/forms/Answer.php:13
+#: application/modules/client/forms/Ticket.php:19
+msgid "Subject"
+msgstr "Temat"
+
+#: application/modules/client/forms/Ticket.php:26
+msgid "Body"
+msgstr "Treść"
+
+#: application/modules/client/forms/Ticket.php:37
+msgid "Category"
+msgstr "Kategoria"
+
+#: application/modules/client/forms/Ticket.php:45
+msgid "Type"
+msgstr "Typ"
+
+#: application/modules/default/controllers/ProfileController.php:85
+msgid "Edit details"
+msgstr "Edytuj szczegóły"
+
+#: application/modules/default/controllers/ProfileController.php:89
+msgid "Create new details profile"
+msgstr "Utwórz nowy profil danych dodatkowych"
+
+#: application/modules/default/controllers/ProfileController.php:97
+msgid "Zmien"
+msgstr "Zmień"
+
+#: application/modules/default/forms/LoginForm.php:38
+msgid "Login"
+msgstr "Zaloguj się"
+
+#: application/modules/default/forms/Ticket.php:20
+msgid "Topic"
+msgstr "Temat"
+
+#: application/modules/default/forms/UserDetails.php:9
+msgid "Name"
+msgstr "Imię"
+
+#: application/modules/default/forms/UserDetails.php:12
+msgid "Surname"
+msgstr "Nazwisko"
+
+#: application/modules/default/forms/UserDetails.php:15
+msgid "Email"
+msgstr "Email"
+
+#: application/modules/default/forms/UserDetails.php:19
+msgid "Company"
+msgstr "Firma"
+
+#: application/modules/support/controllers/SrqController.php:76
+msgid "Change department"
+msgstr "Zmień departament"
+
+#: application/modules/support/controllers/TicketController.php:100
+msgid "Change priority"
+msgstr "Zmień priorytet"
+
+#: application/modules/support/controllers/TicketController.php:106
+msgid "Change category"
+msgstr "Zmień kategorię"
+
+#: application/modules/support/forms/AddAnswerForm.php:27
+msgid "Visible for user"
+msgstr "Widzialny dla użytkownika"
+
+#: application/modules/support/forms/AddAnswerForm.php:31
+msgid "Is that end answer"
+msgstr "Czy to rozwiązanie"
+
+#: application/modules/support/forms/AddSupportRequestForm.php:36
+msgid "Request type"
+msgstr "Typ requesta"
+
+#: application/modules/support/forms/AddSupportRequestReplyForm.php:28
+msgid "Answer status"
+msgstr "Status odpowiedzi"
+
+#: application/modules/support/forms/ChangePriorityForm.php:17
+msgid "Priority"
+msgstr "Priorytet"
+
+#: application/modules/support/forms/Createticket.php:48
+msgid "Client"
+msgstr "Klient"
+
+#: application/modules/support/forms/SaveReport.php:18
+msgid "Save generated report"
+msgstr "Zapisz wygenerowany właśnie raport"
+
+#: application/modules/support/forms/WhatStat.php:12
+#: application/modules/support/forms/WhatStatExpert.php:12
+msgid "Date From"
+msgstr "Data od"
+
+#: application/modules/support/forms/WhatStat.php:16
+#: application/modules/support/forms/WhatStatExpert.php:16
+msgid "Date To"
+msgstr "Data do"
+
+#: application/modules/support/forms/WhatStat.php:20
+msgid "Select group"
+msgstr "Wybierz grupę"
+
+#: application/modules/support/forms/WhatStat.php:31
+#: application/modules/support/forms/WhatStatExpert.php:31
+msgid "Create raport"
+msgstr "Utwórz raport"
+
+#: application/layouts/scripts/layout.phtml:37
+msgid "Main page"
+msgstr "Stona główna"
+
+#: application/layouts/scripts/layout.phtml:45
+msgid "Hello"
+msgstr "Witaj"
+
+#: application/layouts/scripts/layout.phtml:51
+msgid "Select language"
+msgstr "Wybierz język"
+
+#: application/layouts/scripts/layout.phtml:62
+msgid "Polish"
+msgstr "Polski"
+
+#: application/layouts/scripts/layout.phtml:69
+msgid "English"
+msgstr "Angielski"
+
+#: application/modules/admin/views/scripts/user/add.phtml:5
+msgid "Add new user"
+msgstr "Dodaj użytkownika"
+
+#: application/modules/admin/views/scripts/user/edit.phtml:2
+msgid "Edit user"
+msgstr "Edytuj użytkownika"
+
+#: application/modules/admin/views/scripts/user/editpremissions.phtml:1
+msgid "Change premissions"
+msgstr "Zmień prawa dostępu"
+
+#: application/modules/admin/views/scripts/user/editpremissions.phtml:3
+msgid "Actual premissions to departments"
+msgstr "Aktualne prawa dostępu dla departamentu"
+
+#: application/modules/admin/views/scripts/user/editpremissions.phtml:13
+msgid "Do you want delete this premission"
+msgstr "Czy chcesz usunąć to pozwolenie"
+
+#: application/modules/admin/views/scripts/user/editpremissions.phtml:23
+msgid "Add premission to department"
+msgstr "Dodaj pozwolenia do departamentu"
+
+#: application/modules/admin/views/scripts/user/password.phtml:2
+msgid "Edit password"
+msgstr "Edytuj hasło"
+
+#: application/modules/admin/views/scripts/users/list.phtml:34
+msgid "Registered"
+msgstr "Zarejestrowany"
+
+#: application/modules/admin/views/scripts/users/list.phtml:35
+#: application/modules/admin/views/scripts/users/premissions.phtml:24
+msgid "Edit"
+msgstr "Edytuj"
+
+#: application/modules/admin/views/scripts/users/list.phtml:37
+msgid "Delete"
+msgstr "Usuń"
+
+#: application/modules/admin/views/scripts/users/list.phtml:59
+msgid "Do you wanna delete this user"
+msgstr "Czy chcesz usunąć tego użytkownika"
+
+#: application/modules/client/views/scripts/ticket/add.phtml:6
+msgid "Add new ticket"
+msgstr "Dodaj zgłoszenie"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:4
+msgid "Details od your ticket"
+msgstr "Szczegóły tego zgłoszenia"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:8
+msgid "Status"
+msgstr "Status"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:11
+msgid "open"
+msgstr "otwarte"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:13
+msgid "closed"
+msgstr "zamknięte"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:42
+msgid "Final Answer"
+msgstr "Odpowiedź"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:45
+msgid "History"
+msgstr "Hitoria"
+
+#: application/modules/client/views/scripts/ticket/show.phtml:51
+msgid "Add reply"
+msgstr "Dodaj odpowiedź"
+
+#: application/modules/client/views/scripts/tickets/list.phtml:26
+msgid "Title"
+msgstr "Tytuł"
+
+#: application/modules/client/views/scripts/tickets/list.phtml:28
+msgid "Created"
+msgstr "Utworzone"
+
+#: application/modules/client/views/scripts/tickets/list.phtml:29
+msgid "Closed"
+msgstr "zamknięte"
+
+#: application/modules/client/views/scripts/tickets/list.phtml:31
+msgid "Details"
+msgstr "Szczegóły"
+
+#: application/modules/client/views/scripts/tickets/list.phtml:54
+msgid "Show"
+msgstr "Pokaż"
+
+#: application/modules/default/views/scripts/authentication/login.phtml:7
+msgid "Login Box"
+msgstr "Okno logowania"
+
+#: application/modules/default/views/scripts/profile/changepassword.phtml:7
+msgid "Change your password"
+msgstr "Zmień swoje hasło"
+
+#: application/modules/default/views/scripts/profile/index.phtml:3
+msgid "Personal Details"
+msgstr "Szczegóły osobiste"
+
+#: application/modules/default/views/scripts/profile/index.phtml:7
+msgid "Register"
+msgstr "Zarejestruj się"
+
+#: application/modules/default/views/scripts/profile/index.phtml:8
+msgid "LogDate"
+msgstr "Data logowania"
+
+#: application/modules/default/views/scripts/profile/index.phtml:9
+msgid "LogIp"
+msgstr "IP"
+
+#: application/modules/default/views/scripts/profile/index.phtml:12
+msgid "change your password"
+msgstr "zmień swoje hasło"
+
+#: application/modules/default/views/scripts/profile/index.phtml:18
+msgid "More details"
+msgstr "Szczegóły konta"
+
+#: application/modules/default/views/scripts/profile/index.phtml:36
+msgid "Statistics for client"
+msgstr "Statystyki klienta"
+
+#: application/modules/default/views/scripts/profile/index.phtml:39
+msgid "Your total tickets"
+msgstr "Liczba twoich zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:40
+msgid "Your total open tickets"
+msgstr "Liczba otwartych zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:49
+msgid "Statistics for support"
+msgstr "Statystyki dla pomocy"
+
+#: application/modules/default/views/scripts/profile/index.phtml:52
+msgid "Total tickets"
+msgstr "Wszystkich zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:53
+msgid "Total open tickets"
+msgstr "Otwartych zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:54
+msgid "Open tickets you're responsible"
+msgstr "Przypisanych zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:55
+msgid "Today you close"
+msgstr "Dzisiaj zamknąłeś"
+
+#: application/modules/default/views/scripts/profile/index.phtml:55
+msgid "tickets"
+msgstr "zgłoszeń"
+
+#: application/modules/default/views/scripts/profile/index.phtml:64
+msgid "Statistics for admin"
+msgstr "Statystyki administratora"
+
+#: application/modules/default/views/scripts/profile/index.phtml:67
+msgid "Total users"
+msgstr "Razem użytkowników"
+
+#: application/modules/default/views/scripts/profile/index.phtml:70
+msgid "Total clients"
+msgstr "Liczba  klientów"
+
+#: application/modules/default/views/scripts/profile/index.phtml:71
+msgid "Total supporters"
+msgstr "Liczba pomocników"
+
+#: application/modules/default/views/scripts/profile/index.phtml:72
+msgid "Total experts"
+msgstr "Liczba ekspertów"
+
+#: application/modules/default/views/scripts/profile/index.phtml:73
+msgid "Total admins"
+msgstr "Liczba adminów"
+
+#: application/modules/support/views/scripts/srq/show.phtml:14
+msgid "Details of support"
+msgstr "Szczegóły Support Requesta"
+
+#: application/modules/support/views/scripts/srq/show.phtml:16
+msgid "Ticket"
+msgstr "Zgłoszenie"
+
+#: application/modules/support/views/scripts/srq/show.phtml:16
+#: application/modules/support/views/scripts/stat/experts.phtml:33
+#: application/modules/support/views/scripts/stat/users.phtml:34
+msgid "show"
+msgstr "pokaż"
+
+#: application/modules/support/views/scripts/srq/show.phtml:20
+msgid "Start time"
+msgstr "Rozpoczęty"
+
+#: application/modules/support/views/scripts/srq/show.phtml:21
+msgid "Modified time"
+msgstr "Zmodyfikowany"
+
+#: application/modules/support/views/scripts/srq/show.phtml:22
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#: application/modules/support/views/scripts/srq/show.phtml:23
+msgid "Responsible"
+msgstr "Odpowiedzialny"
+
+#: application/modules/support/views/scripts/srq/show.phtml:32
+msgid "Replies"
+msgstr "Odpowiedzi"
+
+#: application/modules/support/views/scripts/srq/show.phtml:58
+msgid "Add comment"
+msgstr "Dodaj komentarz"
+
+#: application/modules/support/views/scripts/srqs/list.phtml:2
+msgid "Requests"
+msgstr "Żądań pomocy"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:22
+msgid "Create report for Experts"
+msgstr "Utwórz raport dla Ekspertów"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:29
+#: application/modules/support/views/scripts/stat/users.phtml:30
+msgid "Show saved report from history"
+msgstr "Pokaż zapisane raporty z historii"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:33
+#: application/modules/support/views/scripts/stat/users.phtml:34
+msgid "by"
+msgstr "przez"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:77
+msgid "ClosedSRQ"
+msgstr "ZamknięteSRQ"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:78
+msgid "UnsolvedSRQ"
+msgstr "NierozwiązaneSRQ"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:79
+#: application/modules/support/views/scripts/stat/users.phtml:74
+msgid "Comment"
+msgstr "Komentarz"
+
+#: application/modules/support/views/scripts/stat/experts.phtml:80
+msgid "Move"
+msgstr "Przesunięte"
+
+#: application/modules/support/views/scripts/stat/users.phtml:21
+msgid "Create report for Users"
+msgstr "Utwórz raport dla Użytkowników"
+
+#: application/modules/support/views/scripts/stat/users.phtml:70
+msgid "ClientCreate"
+msgstr "UtworzoneKlient"
+
+#: application/modules/support/views/scripts/stat/users.phtml:71
+msgid "ClientComment"
+msgstr "KlientKomentarz"
+
+#: application/modules/support/views/scripts/stat/users.phtml:72
+msgid "Create"
+msgstr "Utwórz"
+
+#: application/modules/support/views/scripts/stat/users.phtml:73
+msgid "Close"
+msgstr "Zamknięte"
+
+#: application/modules/support/views/scripts/stat/users.phtml:75
+msgid "Get"
+msgstr "Pobrane"
+
+#: application/modules/support/views/scripts/stat/users.phtml:76
+msgid "CreateSRQ"
+msgstr "UtworzoneSRQ"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:6
+msgid "Details of this ticket"
+msgstr "Szczegóły tego zgłoszenia"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:10
+msgid "get ticket"
+msgstr "pobierz zgłoszenie"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:19
+msgid "Responsibility"
+msgstr "Odpowiedzialny"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:33
+msgid "Cancel responsibility"
+msgstr "Anuluj odpowiedzialność"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:65
+msgid "Final answer"
+msgstr "Rozwiązanie"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:69
+msgid "Replay's"
+msgstr "Konwersacja"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:73
+msgid "SRQ's"
+msgstr "SRQ"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:92
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: application/modules/support/views/scripts/ticket/show.phtml:99
+msgid "Add SRQ"
+msgstr "Dodaj SRQ"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:2
+msgid "Tickets"
+msgstr "Zgłoszenia"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:24
+msgid "Display _MENU_ records per page"
+msgstr "Wyświetl _MENU_ rekordów na stronie"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:25
+msgid "Nothing found - sorry"
+msgstr "Nic nie znaleziono"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:26
+msgid "Showing _START_ to _END_ of _TOTAL_ records"
+msgstr "Pokazuje _START_ z _END_ [ _TOTAL_ rekordów ]"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:27
+msgid "Showing 0 to 0 of 0 records"
+msgstr "Pokazuje 0 z 0 rekordów"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:28
+msgid "filtered from _MAX_ total records"
+msgstr "filtruje z _MAX_ rekordów razem"
+
+#: application/modules/support/views/scripts/tickets/list.phtml:29
+msgid "Search"
+msgstr "Szukaj"
+
+#: application/configs/navigation.xml:5
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: application/configs/navigation.xml:21
+msgid "My profile"
+msgstr "Mój profil"
+
+#: application/configs/navigation.xml:36
+msgid "Add"
+msgstr "Dodaj"
+
+#: application/configs/navigation.xml:46
+msgid "My Tickets"
+msgstr "Moje zgłoszenia"
+
+#: application/configs/navigation.xml:53
+#: application/configs/navigation.xml:70
+#: application/configs/navigation.xml:106
+msgid "List"
+msgstr "Lista"
+
+#: application/configs/navigation.xml:63
+msgid "Customer Center"
+msgstr "Centrum Pomocy"
+
+#: application/configs/navigation.xml:99
+msgid "Customer Expert"
+msgstr "Centrum Eksperta"
+
+#: application/configs/navigation.xml:116
+msgid "Administration"
+msgstr "Administracja"
+
+#: application/configs/navigation.xml:123
+msgid "User list"
+msgstr "Lista użytkowników"
+
+#: application/configs/navigation.xml:131
+msgid "Premissions"
+msgstr "Pozwolenie"
+
+#: application/configs/navigation.xml:141
+msgid "Reports"
+msgstr "Raporty"
+
+#: application/configs/navigation.xml:148
+msgid "users"
+msgstr "Użytkownicy"
+
+#: application/configs/navigation.xml:156
+msgid "experts"
+msgstr "Eksperci"
+
+#: application/configs/navigation.xml:166
+msgid "Modules"
+msgstr "Moduły"
+
+#: application/configs/navigation.xml:173
+msgid "email"
+msgstr "Wiadomości email"
+
+#~ msgid "Witaj"
+#~ msgstr "Hello"
+
+#~ msgid "Temat zgłoszenia"
+#~ msgstr "Temat zgłoszenia"
+
+#~ msgid "Treść zgłoszenia"
+#~ msgstr "Treść zgłose"
+
+#~ msgid "Request Support"
+#~ msgstr "Request Support"

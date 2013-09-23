@@ -1,0 +1,67 @@
+<?php
+$this->title = "Your users";
+$this->headTitle($this->title);
+$this->jQuery()->enable();
+?>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#userList').dataTable( {
+            "bJQueryUI": true,
+            "bAutoWidth": true
+        } );
+    } );
+</script> 
+
+<div style="width:15%;float: right; text-align: center;margin-top:100px;">
+    <a href="<?php echo $this->url(array('controller' => 'user', 'action' => 'add')); ?>">
+        <img src="<?php echo $this->baseUrl(); ?>/css/img/addNewUser.png" alt="" />
+    </a>
+</div>
+
+<?php $id = 0; ?>
+
+<div style="width:80%;overflow:hidden;float:left">
+
+    <table id="userList">
+        <thead>
+            <tr>
+                <th style="width:5%">Id</th>
+                <th style="width:15%"><?php echo $this->translate('Username'); ?></th>
+                <th style="width:15%"><?php echo $this->translate('Group'); ?></th>
+                <th style="width:15%"><?php echo $this->translate('Registered'); ?></th>
+                <th style="width:5%"><?php echo $this->translate('Edit'); ?></th>
+                <th style="width:5%"><?php echo $this->translate('Password'); ?></th>
+                <th style="width:5%"><?php echo $this->translate('Delete'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php foreach ($this->users as $users) : ?>
+                <tr <?php if ($id % 2 == 0)
+                echo ' class="grey" '; $id++; ?>>
+                    <td style="padding:7px;text-align: center"><?php echo $this->escape($users->id); ?></td>
+                <td><?php echo $this->escape($users->login); ?></td>
+                <td><?php echo $this->escape($users->name); ?></td>
+                <td style="text-align: center"><?php echo $this->escape(date('d M Y',  strtotime($users->dataReg))); ?></td>
+                <td style="text-align: center">
+                    <a href="<?php echo $this->url(array('controller' => 'user', 'action' => 'edit', 'id' => $users->id)); ?>">
+                        <img src="<?php echo $this->baseUrl(); ?>/css/img/edit.gif" alt="" />
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a href="<?php echo $this->url(array('controller' => 'user', 'action' => 'password', 'id' => $users->id)); ?>">
+                        <img src="<?php echo $this->baseUrl(); ?>/css/img/editPassword.gif" alt="" />
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a href="<?php echo $this->url(array('controller' => 'user', 'action' => 'delete', 'id' => $users->id)); ?>" onClick="return confirm('<?php echo $this->translate('Do you wanna delete this user'); ?>?')">
+                        <img src="<?php echo $this->baseUrl(); ?>/css/img/remove.png" alt="" />
+                    </a>
+                </td>
+            </tr>
+<?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

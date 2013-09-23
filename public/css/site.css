@@ -1,0 +1,267 @@
+body,html {
+    margin: 0;
+    font-family: Verdana,sans-serif;
+    width:100%;
+    font-size: 12px;
+}
+h1 {
+    font-size: 1.4em;
+    color: #008000;
+}
+
+a img {
+    border: none;
+}
+
+#wrapper {
+    width: 100%;
+    background-image:  url('img/backgroundLogo.png') ;
+    background-position: top center;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+#head {}
+
+#mainBody {
+    width: 97%;
+    margin:0px auto;
+    overflow: hidden;
+}
+
+#logo {
+    display:block;
+    width: 100%;
+    height: 163px;
+    margin-bottom:10px;
+}
+
+#footer {
+    background: url(img/footer.png) repeat-x;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-family: Verdana;
+}
+
+#mainMenu {
+    width: 100%;
+    background: url(img/backgroundMenu.png) repeat-x;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#leftMenu {
+    float:left;
+    width: 15%
+}
+
+
+#leftMenu ul {
+    margin: 20px 0 0 0;
+    padding: 0px;
+    list-style: none;
+}
+
+#leftMenu ul ul {
+    margin-left: 10px;
+    padding: 3px;
+    margin-top: 0px;
+}
+
+
+#leftMenu li {}
+
+
+#leftMenu li a {
+    text-decoration: none;
+    color: #0078ae;
+    font-size: 13px;
+}
+
+#leftMenu li a:hover {
+    color: #008000;
+    border-bottom: 1px #008000 dotted;
+}
+
+
+.nonClick {
+    font-size: 15px !important;
+    color: #333333 !important;
+    border: none !important;
+    cursor: default;
+}
+
+.grey {
+    background: #f2f1f1;
+}
+
+#content {
+    border-left: 1px slategray solid;
+    float:right;
+    padding-left:30px;
+    width: 80%;
+    /*
+    font-size: 13px;
+    font-family: Verdana;
+    */
+}
+
+
+#mainMenu ul{
+    margin: 0;
+    padding: 0;
+}
+
+#mainMenu li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 6px;
+    margin-left:0px;
+    border-right: 1px #fff dotted;
+}
+
+#mainMenu a{
+    color:#fff;
+    text-decoration: none;
+}
+
+#mainMenu a:hover {
+    color: #deff00;
+}
+
+.rightCorner {
+    float:right;
+    padding: 10px 6px;
+    color:#fff;
+}
+a {
+    color: #008000;
+}
+/* Table */
+th {
+    text-align: left;
+}
+td, th {
+    padding-right: 5px;
+}
+/* style form */
+
+.zend_form {
+    display: block;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.zend_form input, .zend_form textarea, .zend_form select {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px #666666 solid;
+    background:#f8f8f8;
+}
+
+#ticketList {
+    color:#444444;
+}
+
+form dt {
+    width: 180px;
+    display: block;
+    float: left;
+    clear: left;
+}
+form dd {
+    margin-left: 0;
+    float: left;
+    width:200px;
+    margin-top:5px;
+}
+form #submitbutton {
+    margin-left: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.greyBox, .greyBox2 {
+    display: block;
+    min-height: 150px;
+    min-width: 260px;
+    max-width: 600px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+    background: #eeeadd url('img/glossWave.png') repeat-x;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.greyBox2 {
+    width: 60%;
+    float: right;
+    margin-right: 5px;
+}
+
+.greyBox h4 {
+    margin-top:2px;
+}
+
+.greyBox li:before {
+    content: "»";
+    padding-right: 5px;
+}
+
+.greyBox ul {
+    margin-top: 2px;
+    padding: 0px;
+    list-style: none;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+}
+
+.errors {
+    font-size: 10px !important;
+    color: red;
+}
+
+.greyBoxTitle {
+    position: relative;
+    top: -20px;
+    left: -5px;
+    border: 1px #DADCFF solid;
+    background:#0078ae;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    min-width: 20%;
+    max-width: 80%;
+    font-size: 13px;
+    margin-bottom: -10px;
+}
+
+.greyBox a {
+    color:darkmagenta;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.greyBox a:hover {
+    border-bottom: 1px darkmagenta dotted;
+}
+
+.reportCreated {
+    float: right;
+    background: red;
+    width: 60%;
+}

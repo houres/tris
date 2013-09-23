@@ -1,0 +1,64 @@
+<?php
+$tab = $this->support[0];
+$this->jQuery()->enable();
+
+$replies = '';
+
+foreach ($this->supportReplies as $reply) {
+
+    $replies .= '<p><strong>'.$reply->date.' by '.$reply->login.'</strong><br/>';
+    $replies .= $reply->body.'</p>';
+
+}
+?>
+<h3><?php echo $this->translate('Details of support'); ?></h3>
+<p>
+    <strong><?php echo $this->translate('Ticket'); ?>: </strong> <?php echo $tab['ticketId']; ?>  <a href="<?php echo $this->url(array('controller' => 'ticket', 'action' => 'show', 'id' => $tab['ticketId']), 'default'); ?>"  target="_blank"><?php echo $this->translate('show'); ?></a><br/>
+    <strong><?php echo $this->translate('Topic'); ?>: </strong><?php echo $tab['ticketSubject']; ?> <br/>
+    <strong><?php echo $this->translate('Status'); ?>: </strong><?php echo $tab['name']; ?> <br/>
+    <strong><?php echo $this->translate('Department'); ?>: </strong> <?php echo $tab['departmentName']; ?> <br/>
+    <strong><?php echo $this->translate('Start time'); ?>: </strong> <?php echo $tab['startTime']; ?> <br/>
+    <strong><?php echo $this->translate('Modified time'); ?>: </strong> <?php echo $tab['modifiedTime']; ?> <br/>
+    <strong><?php echo $this->translate('Created by'); ?>: </strong> <?php echo $tab['ownerId']; ?> <br/>
+    <strong><?php echo $this->translate('Responsible'); ?>: </strong> <?php echo $tab['responsibilityID']; ?>
+</p>
+<p>
+    <strong><?php echo $this->translate('Body'); ?>: </strong> <?php echo $tab['ticketBody']; ?>
+</p>
+
+<?php
+echo $this->tabPane("newstab",
+        $replies,
+        array('title' => $this->translate('Replies')));
+
+
+$acl = Zend_Registry::get('acl');
+
+if ($tab['statusId'] == 1 && $acl->isAllowed(Zend_Registry::get('role'), 'support:srq', 'changedepartment') and $this->checkGroup) {
+
+
+    echo $this->tabPane("newstab",
+            $this->departmentForm,
+            array('title' => $this->translate('Change department')));
+}
+
+if ($tab['statusId'] == 1 && $acl->isAllowed(Zend_Registry::get('role'), 'support:srq', 'solve') and $this->checkGroup) {
+
+    echo $this->tabPane("newstab",
+            $this->form,
+            array('title' => $this->translate('Add reply')));
+}
+
+
+
+if ($acl->isAllowed(Zend_Registry::get('role'), 'support:srq', 'simplysolve')) {
+
+    echo $this->tabPane("newstab",
+            $this->simplyform,
+            array('title' => $this->translate('Add comment')));
+}
+
+echo $this->tabContainer("newstab",
+        array(),
+        array('class' => 'flora'));
+?>

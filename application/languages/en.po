@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tris\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-26 13:26+0100\n"
+"PO-Revision-Date: 2011-05-26 13:28+0100\n"
+"Last-Translator: Kamil\n"
+"Language-Team: TRIS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate;_;setLabel;setValue;setLegend;_refresh\n"
+"X-Poedit-Basepath: C:\\Users\\goku\\Desktop\\VPS\\tris\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: application\n"
+
+#: application/modules/admin/controllers/UserController.php:32
+msgid "Add user"
+msgstr "Add user"
+
+#: application/modules/admin/controllers/UserController.php:69
+msgid "Zapisz"
+msgstr "Save"
+
+#: application/modules/admin/controllers/UserController.php:104
+msgid "Zmien"
+msgstr "Change"
+
+#: application/modules/admin/controllers/UserController.php:176
+msgid "Add premission"
+msgstr "Dodaj pozwolenie"
+
+#: application/modules/admin/forms/ChangePassword.php:15
+#: application/modules/admin/forms/CreateUser.php:31
+msgid "Password"
+msgstr "Password"
+
+#: application/modules/admin/forms/CreateUser.php:23
+#: application/modules/admin/forms/EditUser.php:16
+msgid "Username"
+msgstr "Username"
+
+#: application/modules/admin/forms/CreateUser.php:42
+#: application/modules/admin/forms/EditUser.php:26
+msgid "Group"
+msgstr "Group"
+
+#: application/modules/admin/forms/CreateUser.php:49
+#: application/modules/admin/forms/EditUser.php:33
+msgid "Enabled"
+msgstr "Enabled"
+
+#: application/modules/admin/forms/SelectPremissions.php:19
+msgid "Department"
+msgstr "Department"
+
+#: application/modules/client/controllers/TicketController.php:23
+msgid "Add ticket"
+msgstr "Add ticket"
+
+#: application/modules/client/controllers/TicketController.php:103
+#: application/modules/client/forms/Answer.php:20
+msgid "Answer"
+msgstr "Answer"
+
+#: application/modules/client/forms/Answer.php:13
+#: application/modules/client/forms/Ticket.php:19
+msgid "Subject"
+msgstr "Subject"
+
+#: application/modules/client/forms/Ticket.php:26
+msgid "Body"
+msgstr "Body"
+
+#: application/modules/client/forms/Ticket.php:37
+msgid "Category"
+msgstr "Category"
+
+#: application/modules/client/forms/Ticket.php:45
+msgid "Type"
+msgstr "Type"
+
+#: application/modules/default/forms/Ticket.php:20
+msgid "Temat zgłoszenia"
+msgstr "Topic"
+
+#: application/modules/default/forms/Ticket.php:27
+msgid "Treść zgłoszenia"
+msgstr "Body"
+
+#: application/modules/support/controllers/SrqController.php:76
+msgid "Change department"
+msgstr "Change department"
+
+#: application/modules/support/controllers/TicketController.php:105
+msgid "Change priority"
+msgstr "Change priority"
+
+#: application/modules/support/controllers/TicketController.php:111
+msgid "Change category"
+msgstr "Change category"
+
+#: application/modules/support/forms/AddAnswerForm.php:27
+msgid "Visible for user?"
+msgstr "Visible for user?"
+
+#: application/modules/support/forms/AddAnswerForm.php:31
+msgid "Is that end answer?"
+msgstr "Is that end answer?"
+
+#: application/modules/support/forms/AddSupportRequestForm.php:21
+msgid "Request Support"
+msgstr "Request Support"
+
+#: application/modules/support/forms/AddSupportRequestForm.php:27
+msgid "Send to department"
+msgstr "Send to department"
+
+#: application/modules/support/forms/AddSupportRequestForm.php:36
+msgid "Request type"
+msgstr "Request type"
+
+#: application/modules/support/forms/AddSupportRequestReplyForm.php:28
+msgid "Answer status"
+msgstr "Answer status"
+
+#: application/modules/support/forms/ChangePriorityForm.php:17
+msgid "Priority"
+msgstr "Priority"
+
+#: application/modules/support/forms/Createticket.php:48
+msgid "Client"
+msgstr "Client"
+
+#: application/modules/support/forms/WhatStat.php:12
+#: application/modules/support/forms/WhatStatExpert.php:12
+msgid "Date From"
+msgstr "Date From"
+
+#: application/modules/support/forms/WhatStat.php:16
+#: application/modules/support/forms/WhatStatExpert.php:16
+msgid "Date To"
+msgstr "Date To"
+
+#: application/modules/support/forms/WhatStat.php:20
+msgid "Select group"
+msgstr "Select group"
+
+#: application/modules/support/forms/WhatStat.php:31
+#: application/modules/support/forms/WhatStatExpert.php:31
+msgid "Create raport"
+msgstr "Create raport"
+

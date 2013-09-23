@@ -1,0 +1,106 @@
+<?php
+$tab = $this->ticket[0];
+$this->jQuery()->enable();
+?>
+
+<h3><?php echo $this->translate('Details of this ticket'); ?></h3>
+<p>
+    <?php
+    if ($tab['statusId'] == 1 || $tab['statusId'] == 5) {
+        echo '<a href="' . $this->url(array('controller' => 'ticket', 'action' => 'setresponsibility', 'id' => $tab['ticketId']), 'default') . '">( ' . $this->translate('get ticket') . ' )</a>';
+    } ?>
+</p>
+<p>
+<ul>
+    <li><strong><?php echo $this->translate('Topic'); ?>: </strong><?php echo $this->escape($tab['subject']); ?></li>
+    <li><strong><?php echo $this->translate('Created'); ?>: </strong><?php echo $this->escape($tab['created']); ?></li>
+    <li><strong><?php echo $this->translate('Modified time'); ?>: </strong><?php echo $this->escape($tab['modified']); ?></li>
+    <li><strong><?php echo $this->translate('Status'); ?>: </strong><?php echo $tab['name']; ?></li>
+    <li><strong><?php echo $this->translate('Responsibility'); ?>: </strong> <?php echo $tab['login']; ?></li>
+    <li><strong><?php echo $this->translate('Priority'); ?>:</strong> <?php echo $tab['priorityName']; ?></li>
+    <li><strong><?php echo $this->translate('Category'); ?>:</strong> <?php echo $tab ['categoryName']; ?></li>
+</ul>
+
+</p>
+<p>
+    <strong><?php echo $this->translate('Body'); ?>: </strong> <?php echo $this->escape($tab['body']); ?>
+</p>
+
+
+<p>
+
+    <?php
+    $cancel = '<p><a href="' . $this->url(array('controller' => 'ticket', 'action' => 'cancel', 'id' => $tab['ticketId']), 'default') . '">' . $this->translate('Cancel responsibility') . '</a></p>';
+
+// odpowiedzi
+    $numerOfAnswer = 1;
+    $count = count($this->replays);
+    $result = "";
+    $finalAnswer = "";
+
+    foreach ($this->replays as $replay) {
+        if ($numerOfAnswer != $count)
+            $result .= '<p> &raquo; <strong>' . $replay->subject . '</strong> </br> ' . $replay->body . '</p>';
+        else if ($tab['statusId'] == 6)
+            $finalAnswer = $replay->body . '</br>';
+        else
+            $result .= '<p> &raquo; <strong>' . $replay->subject . '</strong> </br> ' . $replay->body . '</p>';
+
+        $numerOfAnswer++;
+    }
+
+
+    // support requesty
+    $supportRequests = '';
+
+    foreach ($this->supports as $support) {
+        $supportRequests .= '<p> &raquo; <strong>' . $support->ticketSubject . '</strong> :: ' . $this->translate('Group') . ':' . $support->groupId . ' :: ' . $this->translate('Status') . ': ' . $support->name . ' &raquo; <a href="' . $this->url(array('controller' => 'srq', 'action' => 'show', 'id' => $support->id), 'default') . '">' . $this->translate('show') . '</a></p>';
+    }
+    ?>
+
+
+<?php
+    echo $this->tabPane("newstab",
+            $finalAnswer,
+            array('title' => $this->translate('Final answer')));
+
+    echo $this->tabPane("newstab",
+            $result,
+            array('title' => $this->translate('Replay\'s')));
+
+    echo $this->tabPane("newstab",
+            $supportRequests,
+            array('title' => $this->translate('SRQ\'s')));
+
+
+    if ($tab['statusId'] == 2 && $tab['departmentId'] == Zend_Auth::getInstance()->getStorage()->read()->id) {
+
+        echo $this->tabPane("newstab",
+                $this->priorityForm,
+                array('title' => $this->translate('Change priority')));
+
+        echo $this->tabPane("newstab",
+                $this->categoryForm,
+                array('title' => $this->translate('Change category')));
+
+        echo $this->tabPane("newstab",
+                $this->answerForm,
+                array('title' => $this->translate('Add reply')));
+
+        echo $this->tabPane("newstab",
+                $cancel,
+                array('title' => $this->translate('Cancel')));
+    }
+
+    if (($tab['statusId'] == 4 || $tab['statusId'] == 2 ) && $tab['departmentId'] == Zend_Auth::getInstance()->getStorage()->read()->id) {
+
+        echo $this->tabPane("newstab",
+                $this->suprequestForm,
+                array('title' => $this->translate('Add SRQ')));
+    }
+
+    echo $this->tabContainer("newstab",
+            array(),
+            array('class' => 'flora'));
+?>
+</p>

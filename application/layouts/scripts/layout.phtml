@@ -1,0 +1,103 @@
+<?php
+/**
+ * Generuje wygląd aplikacji.
+ */
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('TRIS');
+echo $this->doctype();
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php
+        echo $this->headLink()->prependStylesheet($this->baseUrl() . '/css/site.css');
+
+        if ($this->jQuery()->isEnabled()) {
+            $this->jQuery()->setLocalPath($this->baseUrl() . '/js/jquery/js/jquery-1.5.1.min.js')
+                    ->setUiLocalPath($this->baseUrl() . '/js/jquery/js/jquery-ui-1.8.13.custom.min.js')
+                    ->addStylesheet($this->baseUrl() . '/js/jquery/css/south-street/jquery-ui-1.8.13.custom.css')
+                    ->addJavascriptFile($this->baseUrl() . '/js/dataTables/media/js/jquery.dataTables.min.js');
+            echo $this->jQuery();
+        }
+        ?>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="mainBody">
+                <div id="logo"> <img src="<?php echo $this->baseUrl() . '/css/img/logo.png'; ?>" alt="" /> </div>
+
+                <div id="mainMenu">
+
+                    <div style="float:left;">
+                        <ul>
+                            <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'index'), 'default'); ?>">
+                                    <?php echo $this->translate('Main page'); ?>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="rightCorner">
+                        <?php
+                                    if (Zend_Auth::getInstance()->hasIdentity()) {
+                                        echo $this->translate('Hello') . ' ' . Zend_Auth::getInstance()->getStorage()->read()->login;
+                                    }
+                        ?>
+
+                                    |
+
+                        <?php echo $this->translate('Select language');
+
+                        echo ': ';
+                                    $locale = Zend_Registry::get('locale');
+
+                                    if ($locale->getLanguage() != 'pl') {
+
+
+                                        echo '<a href="' . $this->url(array('module' => 'default', 'controller' => 'language',
+                                            'action' => 'switch',
+                                            'lang' => 'pl')) . '
+                                                 ">' . $this->translate('Polish') . '</a>';
+                                    }
+
+                                    if ($locale->getLanguage() != 'en')
+                                        echo '<a href="' . $this->url(array('module' => 'default', 'controller' => 'language',
+                                            'action' => 'switch',
+                                            'lang' => 'en'))
+                                        . '">' . $this->translate('English') . '</a>';
+                        ?>
+                                </div>
+                            </div>
+
+
+                            <div id="leftMenu">
+
+<?php
+                                    echo $this->navigation();
+?>
+                                </div>
+
+
+                                <div id="content">
+
+                                    <h3>
+<?php
+                                    echo $this->navigation()->breadcrumbs()
+                                            ->setMinDepth(0)
+                                            ->setSeparator(' &raquo; ')
+?>
+                                </h3>
+
+
+<?php echo $this->layout()->content; ?>
+                </div>
+
+            </div>
+            <div id="footer"> &copy; Trisamine Software 2011 </div>
+        </div>
+
+
+    </body>
+</html>

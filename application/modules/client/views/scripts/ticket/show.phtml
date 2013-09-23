@@ -1,0 +1,55 @@
+<?php
+$tab = $this->ticket[0];
+?>
+<h3><?php echo $this->translate('Details od your ticket'); ?></h3>
+<p>
+    <strong>ID: </strong><?php echo $tab['ticketId']; ?>
+    <strong><?php echo $this->translate('Topic'); ?>: </strong><?php echo $this->escape($tab['subject']); ?>
+    <strong><?php echo $this->translate('Status'); ?>: </strong>
+    <?php
+if ($tab['statusId'] != 6)
+        echo $this->translate('open');
+else
+        echo $this->translate('closed');
+
+?>
+</p>
+<p>
+    <strong><?php echo $this->translate('Body'); ?>: </strong> <?php echo $this->escape($tab['body']); ?>
+</p>
+
+
+<?php
+
+$numerOfAnswer = 1;
+$count = count($this->replies);
+$result = "";
+$finalAnswer = "";
+
+foreach ($this->replies as $replay) {
+    if($numerOfAnswer != $count )
+        $result .= '<p> &raquo; <strong>'.$this->escape($replay->subject).'</strong> <br/> '.$this->escape($replay->body).'</p>';
+    else if($tab['statusId'] == 6)
+        $finalAnswer = $replay->body.'<br/>';
+    else
+        $result .= '<p> &raquo; <strong>'.$this->escape($replay->subject).'</strong> <br/> '.$this->escape($replay->body).'</p>';
+
+    $numerOfAnswer++;
+}
+
+?>
+
+<h4><?php echo $this->translate('Final Answer'); ?>: </h4>
+<?php echo $finalAnswer; ?>
+
+<h4><?php echo $this->translate('History'); ?>: </h4>
+<?php echo $result; ?>
+
+<?php
+if ( $tab['statusId'] != 6 ) {
+?>
+<h4><?php echo $this->translate('Add reply'); ?>:</h4>
+<?php
+echo $this->form;
+}
+?>

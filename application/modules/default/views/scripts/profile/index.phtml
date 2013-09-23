@@ -1,0 +1,79 @@
+<div class="greyBox">
+
+    <div class="greyBoxTitle"><?php echo $this->translate('Personal Details'); ?></div>
+    <?php echo $this->translate('Username'); ?>: <?php echo $this->login; ?><br/>
+    <?php echo $this->translate('Group'); ?>: <?php echo $this->role; ?><br/>
+    <br/>
+    <?php echo $this->translate('Register'); ?>: <?php echo $this->dataReg; ?><br/>
+    <?php echo $this->translate('LogDate'); ?>: <?php echo $this->logDate; ?><br/>
+    <?php echo $this->translate('LogIp'); ?>: <?php echo $this->ipLog; ?>
+
+    <ul>
+        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'profile', 'action' => 'changepassword')); ?>"><?php echo $this->translate('change your password'); ?></a></li>
+    </ul>
+</div>
+
+<div class="greyBox2" style="float:left;">
+
+    <div class="greyBoxTitle"><?php echo $this->translate('More details'); ?></div>
+
+    <?php
+
+    echo $this->profileDetailsForm;
+
+    ?>
+
+</div>
+
+
+
+<?php
+if ($this->clientAccess) {
+
+    echo '<div class="greyBox">';
+
+
+    echo '<div class="greyBoxTitle">'.$this->translate('Statistics for client').':</div>';
+
+    echo '<ul>';
+    echo '<li>'.$this->translate('Your total tickets').': ' . $this->totalTickets . '</li>';
+    echo '<li>'.$this->translate('Your total open tickets').': ' . $this->totalOpenTickets . '</li>';
+    echo '</ul>';
+    echo '</div>';
+}
+?>
+
+<?php
+if ($this->supportAccess) {
+    echo '<div class="greyBox">';
+    echo '<div class="greyBoxTitle">'.$this->translate('Statistics for support').':</div>';
+
+    echo '<ul>';
+    echo '<li>'.$this->translate('Total tickets').': ' . $this->totalTickets . '</li>';
+    echo '<li>'.$this->translate('Total open tickets').': ' . $this->totalOpenTickets . '</li>';
+    echo '<li>'.$this->translate('Open tickets you\'re responsible').': ' . $this->totalOpenTicketsForSupporter . '</li>';
+    echo '<li>'.$this->translate('Today you close').' ' . $this->totalClosed . ' '.$this->translate('tickets').' </li>';
+    echo '</ul>';
+    echo '</div>';
+}
+?>
+
+<?php
+if ($this->adminAccess) {
+    echo '<div class="greyBox">';
+    echo '<div class="greyBoxTitle">'.$this->translate('Statistics for admin').':</div>';
+
+    echo '<ul>';
+    echo '<li>'.$this->translate('Total users').': ' . $this->totalUsers . '</li>';
+
+    echo '<ul>';
+    echo '<li>'.$this->translate('Total clients').': ' . $this->clientsCount . '</li>';
+    echo '<li>'.$this->translate('Total supporters').': ' . $this->supportersCount . '</li>';
+    echo '<li>'.$this->translate('Total experts').': ' . $this->expertsCount . '</li>';
+    echo '<li>'.$this->translate('Total admins').': ' . $this->adminsCount . '</li>';
+    echo '</ul>';
+
+    echo '</ul>';
+    echo '</div>';
+}
+?>

@@ -1,0 +1,59 @@
+<?php
+/**
+ * Your tickets
+ */
+$this->title = "Your tickets";
+$this->headTitle($this->title);
+
+$this->jQuery()->enable();
+?>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#ticketList').dataTable( {
+            "bJQueryUI": true,
+            "bAutoWidth": true
+        } );
+    } );
+</script>
+
+<?php $id = 0; ?>
+
+<table id="ticketList">
+    <thead
+        <tr>
+            <th style="width:5%">Id</th>
+            <th style="width:25%"><?php echo $this->translate('Title'); ?></th>
+            <th style="width:35%"><?php echo $this->translate('Body'); ?></th>
+            <th style="width:8%"><?php echo $this->translate('Created'); ?></th>
+            <th style="width:8%"><?php echo $this->translate('Closed'); ?></th>
+            <th style="width:9%"><?php echo $this->translate('Status'); ?></th>
+            <th style="width:10%"><?php echo $this->translate('Details'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($this->tickets as $ticket) : ?>
+            <tr<?php if ($id % 2 == 0)
+                echo ' class="grey" '; $id++; ?>>
+            <td style="padding:11px 7px;"><?php echo $this->escape($ticket->ticketId); ?></td>
+            <td><?php echo substr($this->escape($ticket->subject),'0','120' ); ?></td>
+            <td><?php echo substr($this->escape($ticket->body),'0','120' );; ?></td>
+            <td style="text-align: center"><?php echo $this->escape(date('H:i:s', strtotime($ticket->created))) . '<br/>' . $this->escape(date('d M Y', strtotime($ticket->created))); ?></td>
+            <td style="text-align: center">
+                <?php
+                    if($ticket->statusId == 6)
+                    echo $this->escape(date('H:i:s', strtotime($ticket->modified))) . '<br/>' . $this->escape(date('d M Y', strtotime($ticket->modified)));
+                ?></td>
+            <td style="text-align: center"><?php
+                if ($ticket->statusId != 6)
+                    echo 'open';
+                else
+                    echo 'closed';
+                ?></td>
+            <td style="text-align: center">
+                <a href="<?php echo $this->url(array('controller' => 'ticket', 'action' => 'show', 'id' => $ticket->ticketId)); ?>"><?php echo $this->translate('Show'); ?></a>
+            </td>
+        </tr>
+<?php endforeach; ?>
+    </tbody>
+</table>

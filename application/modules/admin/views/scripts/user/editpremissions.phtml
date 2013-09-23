@@ -1,0 +1,27 @@
+<h3> <?php echo $this->translate('Change premissions'); ?></h3>
+
+<h4><?php echo $this->translate('Actual premissions to departments'); ?></h4>
+
+<ul>
+    <?php
+    foreach ($this->premissions as $premission) {
+        echo '<li> '.$premission->userDepartmentsId.' ::  '.$premission->departmentName.'  <a href="'.$this->url( array( 'module' => 'admin',
+                                                                                                                          'controller' => 'user',
+                                                                                                                          'action' => 'deletepremission',
+                                                                                                                          'user' => $premission->usersId,
+                                                                                                                          'group' => $premission->userDepartmentsId), 'default','true'  ).'" 
+                                                                                                                              onClick="return confirm(\''.$this->translate('Do you want delete this premission').'?\')">
+                                                                                                                              <img src="'.$this->baseUrl().'/css/img/remove.png" alt="" />
+</a></li>';
+    }
+    ?>
+</ul>
+
+<h3><?php echo $this->error; ?></h3>
+
+<div class="greyBox">
+    <div class="greyBoxTitle"><?php echo $this->translate('Add premission to department'); ?></div>
+<?php
+echo $this->form;
+?>
+</div>
