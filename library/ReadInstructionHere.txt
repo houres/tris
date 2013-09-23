@@ -1,0 +1,1 @@
+Here you need download Zend Framework 1.11.1 and place folders Zend and ZendX (extras/library/ZendX).
